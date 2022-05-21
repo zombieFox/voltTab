@@ -1,0 +1,36 @@
+.bookmark-open-all {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.5em;
+  color: hsl(var(--bookmark-group-color-secondary-hsl-h),
+      calc(var(--bookmark-group-color-secondary-hsl-s) * 1%),
+      calc(var(--bookmark-group-color-secondary-hsl-l) * 1%));
+  cursor: pointer;
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(0);
+  transition: color var(--theme-transition-xfast-ease), transform var(--theme-transition-fast-ease) calc(var(--theme-transition-speed-fast) * 1s);
+}
+
+.bookmark-group-item:focus-within .bookmark-open-all,
+.bookmark-group-active .bookmark-open-all {
+  transform: translate(-50%, -50%) scale(1);
+  transition: color var(--theme-transition-xfast-ease), transform var(--theme-transition-xslow-bounce) 0s;
+}
+
+.bookmark-group-item:focus-within .bookmark-open-all:hover,
+.bookmark-group-item:focus-within .bookmark-open-all:focus,
+.bookmark-group-active .bookmark-open-all:hover,
+.bookmark-group-active .bookmark-open-all:focus {
+  outline: none;
+  transform: translate(-50%, -50%) scale(1.4);
+  transition: transform var(--theme-transition-fast-bounce);
+}
+
+.bookmark-group-item:focus-within .bookmark-open-all:active,
+.bookmark-group-active .bookmark-open-all:active {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--theme-transition-fast-bounce);
+}

@@ -1,0 +1,22 @@
+.bookmark {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-columns: calc(var(--bookmark-panel-size) * 1vmax) 1fr;
+  align-items: center;
+  z-index: var(--z-index-bookmark);
+}
+
+.bookmark-panel {
+  /* margin: 2em 0 2em 2em; */
+  /* border-radius: 1em; */
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  align-self: normal;
+  background-color:
+    hsla(var(--theme-bookmark-background-color-hsla-h),
+      calc(var(--theme-bookmark-background-color-hsla-s) * 1%),
+      calc(var(--theme-bookmark-background-color-hsla-l) * 1%),
+      var(--theme-bookmark-background-color-hsla-a));
+  backdrop-filter: blur(calc(var(--theme-bookmark-group-background-blur) * 1px));
+}

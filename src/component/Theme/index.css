@@ -1,0 +1,26 @@
+:root {
+  --theme-accent:
+    hsl(var(--theme-accent-hsl-h),
+      calc(var(--theme-accent-hsl-s) * 1%),
+      calc(var(--theme-accent-hsl-l) * 1%));
+  --theme-text:
+    hsl(var(--theme-text-hsl-h),
+      calc(var(--theme-text-hsl-s) * 1%),
+      calc(var(--theme-text-hsl-l) * 1%));
+}
+
+:root {
+  --theme-transition-xfast-bounce: calc(var(--theme-transition-speed-xfast) * 1s) cubic-bezier(var(--theme-easing-bounce));
+  --theme-transition-fast-bounce: calc(var(--theme-transition-speed-fast) * 1s) cubic-bezier(var(--theme-easing-bounce));
+  --theme-transition-medium-bounce: calc(var(--theme-transition-speed-medium) * 1s) cubic-bezier(var(--theme-easing-bounce));
+  --theme-transition-slow-bounce: calc(var(--theme-transition-speed-slow) * 1s) cubic-bezier(var(--theme-easing-bounce));
+  --theme-transition-xslow-bounce: calc(var(--theme-transition-speed-xslow) * 1s) cubic-bezier(var(--theme-easing-bounce));
+}
+
+:root {
+  --theme-transition-xfast-ease: calc(var(--theme-transition-speed-xfast) * 1s) ease-in-out;
+  --theme-transition-fast-ease: calc(var(--theme-transition-speed-fast) * 1s) ease-in-out;
+  --theme-transition-medium-ease: calc(var(--theme-transition-speed-medium) * 1s) ease-in-out;
+  --theme-transition-slow-ease: calc(var(--theme-transition-speed-slow) * 1s) ease-in-out;
+  --theme-transition-xslow-ease: calc(var(--theme-transition-speed-xslow) * 1s) ease-in-out;
+}

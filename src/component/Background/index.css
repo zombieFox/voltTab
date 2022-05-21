@@ -1,0 +1,45 @@
+:root {
+  --background-color-hsl:
+    var(--background-color-hsl-h),
+    calc(var(--background-color-hsl-s) * 1%),
+    calc(var(--background-color-hsl-l) * 1%);
+}
+
+.background {
+  display: block;
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  pointer-events: none;
+  z-index: var(--z-index-background);
+}
+
+.background-color,
+.background-image,
+.background-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-color {
+  background-color: hsl(var(--background-color-hsl));
+  z-index: 1;
+}
+
+.background-image {
+  background-image: var(--background-image-url);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  opacity: var(--background-image-opacity);
+  filter: blur(calc(var(--background-image-blur) * 1px)) grayscale(var(--background-image-grayscale));
+  z-index: 2;
+}
+
+.background-gradient {
+  background: linear-gradient(var(--background-gradient-degree), var(--background-gradient-color));
+  z-index: 3;
+}

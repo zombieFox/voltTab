@@ -1,0 +1,49 @@
+.bookmark-link:link,
+.bookmark-link:visited,
+.bookmark-link:hover,
+.bookmark-link:focus,
+.bookmark-link:active {
+  color: hsl(var(--bookmark-group-color-primary-hsl-h),
+      calc(var(--bookmark-group-color-primary-hsl-s) * 1%),
+      calc(var(--bookmark-group-color-primary-hsl-l) * 1%));
+  text-decoration: none;
+  transform: scale(0);
+  transition: transform var(--theme-transition-medium-ease) calc(var(--bookmark-link-delay) * 1s);
+}
+
+.bookmark-group-item:focus-within .bookmark-link,
+.bookmark-group-active .bookmark-link {
+  transform: scale(1);
+  transition: transform var(--theme-transition-xslow-bounce) 0s;
+}
+
+.bookmark-group-item:focus-within .bookmark-link:hover,
+.bookmark-group-item:focus-within .bookmark-link:focus,
+.bookmark-group-active .bookmark-link:hover,
+.bookmark-group-active .bookmark-link:focus {
+  transform: scale(1.4);
+  transition: transform var(--theme-transition-fast-bounce);
+}
+
+.bookmark-group-item:focus-within .bookmark-link:active,
+.bookmark-group-active .bookmark-link:active {
+  transform: scale(1);
+  transition: transform var(--theme-transition-fast-bounce);
+}
+
+.bookmark-visual {
+  font-size: 2em;
+  min-width: 2em;
+  min-height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookmark-letter {
+  line-height: 1;
+}
+
+.bookmark-image {
+  max-height: 1em;
+}
