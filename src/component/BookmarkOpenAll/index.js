@@ -31,6 +31,12 @@ export const BookmarkOpenAll = function(bookmarkGroupData) {
 
       }
 
+    } else {
+
+      bookmarkGroupData.list.forEach((link, index) => {
+        window.open(link.url, '_blank');
+      });
+
     }
 
   }
