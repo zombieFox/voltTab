@@ -21,7 +21,7 @@ export const Bookmark = function() {
 
   this.populateGroup = () => {
 
-    config.bookmark.group.set.forEach(groupItem => {
+    config.bookmark.group.forEach(groupItem => {
 
       const bookmarkGroup = new BookmarkGroup(groupItem, this.node.allGroup);
 
@@ -47,7 +47,7 @@ export const Bookmark = function() {
 
     this.node.group.addEventListener('mouseleave', () => {
 
-      config.bookmark.group.set.forEach(bookmarkGroup => {
+      config.bookmark.group.forEach(bookmarkGroup => {
 
         bookmarkGroup.active = false;
 

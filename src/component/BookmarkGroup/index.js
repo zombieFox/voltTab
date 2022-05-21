@@ -34,14 +34,13 @@ export const BookmarkGroup = function(bookmarkGroupData, allBookmarkGroup) {
 
   this.toggleActiveState = () => {
 
-    config.bookmark.group.set.forEach(bookmarkGroup => {
+    config.bookmark.group.forEach(bookmarkGroup => {
 
       bookmarkGroup.active = false;
 
     });
 
     bookmarkGroupData.active = true;
-
 
   }
 
