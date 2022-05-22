@@ -19,4 +19,6 @@
       calc(var(--theme-bookmark-background-color-hsla-l) * 1%),
       var(--theme-bookmark-background-color-hsla-a));
   backdrop-filter: blur(calc(var(--theme-bookmark-group-background-blur) * 1px));
+  pointer-events: none;
+  z-index: 1;
 }

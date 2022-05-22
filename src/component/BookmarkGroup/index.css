@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 3em;
   padding: 3em 0;
+  z-index: 2;
 }
 
 .bookmark-group-item {
