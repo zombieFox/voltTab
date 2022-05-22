@@ -1,8 +1,8 @@
 export const config = {
   bookmark: {
-    newTab: true, // open the bookmarks in a new tab: true|false
+    newTab: true, // open the bookmarks in a new tab: true or false
     panel: {
-      size: 35 // width of the left panel
+      size: 35 // width of the left panel, range from 0 to 100
     },
     group: [ // each object in this array is a bookmark group
       // add as many objects { ... } as needed to bookmark group array
@@ -11,12 +11,12 @@ export const config = {
         description: 'Daily apps', // group description
         color: {
           primary: { hsl: [0, 0, 100] }, // colour for group name and icons
-          secondary: { hsl: [200, 60, 70] } // colour for group description and "open all" button
+          secondary: { hsl: [200, 60, 70] } // colour for group description and the open all button
         },
         list: [
           // list of bookmarks in this group
           // add as many links as needed to he list array
-          // the first key can be any of the following types: "icon"|"letter"|"image"
+          // the first key can be any of the following types: icon or letter or image
 
           // icon eg:
           // use a Font Awesome class name found on https://fontawesome.com/icons
