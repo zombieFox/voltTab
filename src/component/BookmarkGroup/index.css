@@ -75,48 +75,6 @@
       calc(var(--bookmark-group-color-secondary-hsl-l) * 1%));
 }
 
-.bookmark-group-indicator {
-  flex-shrink: 0;
-  position: relative;
-  display: block;
-  width: 0.25em;
-  height: 100%;
-}
-
-.bookmark-group-indicator-top,
-.bookmark-group-indicator-bottom {
-  width: 100%;
-  height: 0;
-  display: block;
-  position: absolute;
-  left: 50%;
-  border-radius: 1em;
-  transform: translateX(-50%);
-  background-color: hsl(var(--bookmark-group-color-secondary-hsl-h),
-      calc((var(--bookmark-group-color-secondary-hsl-s) - 30) * 1%),
-      calc((var(--bookmark-group-color-secondary-hsl-l) - 20) * 1%));
-  transition: height var(--theme-transition-fast-ease), background-color var(--theme-transition-medium-ease);
-}
-
-.bookmark-group-indicator-top {
-  bottom: calc(50% + 1.5em);
-}
-
-.bookmark-group-indicator-bottom {
-  top: calc(50% + 1.5em);
-}
-
-.bookmark-group-item:focus-within .bookmark-group-indicator-top,
-.bookmark-group-item:focus-within .bookmark-group-indicator-bottom,
-.bookmark-group-active .bookmark-group-indicator-top,
-.bookmark-group-active .bookmark-group-indicator-bottom {
-  background-color: hsl(var(--bookmark-group-color-secondary-hsl-h),
-      calc(var(--bookmark-group-color-secondary-hsl-s) * 1%),
-      calc(var(--bookmark-group-color-secondary-hsl-l) * 1%));
-  height: 40%;
-  transition: height var(--theme-transition-medium-bounce) calc((var(--theme-transition-speed-xfast) / 2) * 1s), background-color var(--theme-transition-medium-ease);
-}
-
 .bookmark-group-list {
   display: flex;
   flex-wrap: wrap;

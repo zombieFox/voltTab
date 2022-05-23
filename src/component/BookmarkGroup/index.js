@@ -12,9 +12,6 @@ export const BookmarkGroup = function(bookmarkGroupData, allBookmarkGroup) {
     label: document.createElement('div'),
     name: document.createElement('p'),
     description: document.createElement('p'),
-    indicator: document.createElement('div'),
-    indicatorTop: document.createElement('span'),
-    indicatorBottom: document.createElement('span'),
     list: document.createElement('div'),
     openAll: null,
     allList: []
@@ -94,12 +91,6 @@ export const BookmarkGroup = function(bookmarkGroupData, allBookmarkGroup) {
 
     this.node.description.classList.add('bookmark-group-description');
 
-    this.node.indicator.classList.add('bookmark-group-indicator');
-
-    this.node.indicatorTop.classList.add('bookmark-group-indicator-top');
-
-    this.node.indicatorBottom.classList.add('bookmark-group-indicator-bottom');
-
     this.node.name.textContent = bookmarkGroupData.name;
 
     this.node.description.textContent = bookmarkGroupData.description;
@@ -126,13 +117,7 @@ export const BookmarkGroup = function(bookmarkGroupData, allBookmarkGroup) {
 
     this.node.tab.appendChild(this.node.label);
 
-    this.node.indicator.appendChild(this.node.openAll.button());
-
-    this.node.indicator.appendChild(this.node.indicatorTop);
-
-    this.node.indicator.appendChild(this.node.indicatorBottom);
-
-    this.node.tab.appendChild(this.node.indicator);
+    this.node.tab.appendChild(this.node.openAll.openAll());
 
     this.node.groupItem.appendChild(this.node.tab);
 
