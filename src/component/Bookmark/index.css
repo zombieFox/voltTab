@@ -2,7 +2,7 @@
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   display: grid;
-  grid-template-columns: calc(var(--bookmark-panel-size) * 1vmax) 1fr;
+  grid-template-columns: calc(var(--bookmark-panel-size) * 1%) 1fr;
   align-items: center;
   z-index: var(--z-index-bookmark);
 }

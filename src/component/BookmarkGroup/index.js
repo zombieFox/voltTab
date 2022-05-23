@@ -46,33 +46,45 @@ export const BookmarkGroup = function(bookmarkGroupData, allBookmarkGroup) {
 
   this.renderActive = () => {
 
-    bookmarkGroupData.active ? this.node.groupItem.classList.add('bookmark-group-active') : this.node.groupItem.classList.remove('bookmark-group-active');
+    bookmarkGroupData.active ? this.active() : this.inactive();
 
   }
+
+  this.active = () => this.node.groupItem.classList.add('bookmark-group-active')
+
+  this.inactive = () => this.node.groupItem.classList.remove('bookmark-group-active')
 
   this.render = () => {
 
     this.node.groupItem.classList.add('bookmark-group-item');
 
-    this.node.groupItem.addEventListener('mouseenter', () => {
+    if (config.bookmark.alwaysVisible) {
 
-      this.toggleActiveState();
+      this.node.groupItem.classList.add('bookmark-group-active');
 
-      allBookmarkGroup.forEach(group => {
+    } else {
 
-        group.renderActive();
+      this.node.groupItem.addEventListener('mouseenter', () => {
+
+        this.toggleActiveState();
+
+        allBookmarkGroup.forEach(group => {
+
+          group.renderActive();
+
+        });
 
       });
 
-    });
+      this.renderActive();
+
+    };
 
     this.node.tab.classList.add('bookmark-group-tab');
 
     this.node.list.classList.add('bookmark-group-list');
 
     this.node.tab.href = "#";
-
-    this.renderActive();
 
     this.style();
 

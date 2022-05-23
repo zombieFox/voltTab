@@ -10,7 +10,7 @@
 
 .bookmark-group-item {
   display: grid;
-  grid-template-columns: calc(var(--bookmark-panel-size) * 1vmax) 1fr;
+  grid-template-columns: calc(var(--bookmark-panel-size) * 1%) 1fr;
   position: relative;
 }
 
@@ -113,7 +113,7 @@
   background-color: hsl(var(--bookmark-group-color-secondary-hsl-h),
       calc(var(--bookmark-group-color-secondary-hsl-s) * 1%),
       calc(var(--bookmark-group-color-secondary-hsl-l) * 1%));
-  height: 50%;
+  height: 40%;
   transition: height var(--theme-transition-medium-bounce) calc((var(--theme-transition-speed-xfast) / 2) * 1s), background-color var(--theme-transition-medium-ease);
 }
 

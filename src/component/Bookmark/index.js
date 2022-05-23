@@ -45,21 +45,25 @@ export const Bookmark = function() {
 
     this.node.group.classList.add('bookmark-group');
 
-    this.node.group.addEventListener('mouseleave', () => {
+    if (!config.bookmark.alwaysVisible) {
 
-      config.bookmark.group.forEach(bookmarkGroup => {
+      this.node.group.addEventListener('mouseleave', () => {
 
-        bookmarkGroup.active = false;
+        config.bookmark.group.forEach(bookmarkGroup => {
+
+          bookmarkGroup.active = false;
+
+        });
+
+        this.node.allGroup.forEach(group => {
+
+          group.renderActive();
+
+        });
 
       });
 
-      this.node.allGroup.forEach(group => {
-
-        group.renderActive();
-
-      });
-
-    });
+    }
 
     this.node.panel.classList.add('bookmark-panel');
 
