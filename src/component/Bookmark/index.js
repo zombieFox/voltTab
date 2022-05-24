@@ -17,6 +17,8 @@ export const Bookmark = function() {
 
     applyCSSVar('--bookmark-panel', config.bookmark.panel);
 
+    applyCSSVar('--bookmark-icon-scale', config.bookmark.iconSize);
+
     applyCSSVar('--bookmark-icon-spacing', config.bookmark.iconSpacing);
 
     applyCSSVar('--bookmark-group-spacing', config.bookmark.groupSpacing);

@@ -3,6 +3,7 @@
 .bookmark-link:hover,
 .bookmark-link:focus,
 .bookmark-link:active {
+  font-size: calc((var(--bookmark-icon-scale) / 10) * 1em);
   color: hsl(var(--bookmark-group-color-primary-hsl-h),
       calc(var(--bookmark-group-color-primary-hsl-s) * 1%),
       calc(var(--bookmark-group-color-primary-hsl-l) * 1%));
@@ -32,7 +33,6 @@
 }
 
 .bookmark-visual {
-  font-size: 2em;
   min-width: 2em;
   min-height: 2em;
   display: flex;

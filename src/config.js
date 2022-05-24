@@ -1,4 +1,45 @@
 export const config = {
+
+  theme: {
+
+    // global scale
+    scale: 38, // range: min:0|max:100
+
+    // accent colours
+    // not used for much yet, this should be developed as the project grows
+    // colour defined with HSL: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl
+    accent: { hsl: [204, 100, 72] },
+
+    // text colours
+    // not used for much yet, this should be developed as the project grows
+    // colour defined with HSL: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl
+    text: { hsl: [0, 0, 0] },
+
+    // text font
+    // works with Google Fonts: https://fonts.google.com/
+    // enter the full name of a font as it is displayed on Google Fonts
+    font: 'Ubuntu',
+
+    // the speed of the different transitions
+    transition: { speed: { xfast: 10, fast: 20, medium: 30, slow: 40, xslow: 50 } }, // range: min:0|max:*
+
+    // the bounce transition easing bezier curve
+    easing: { bounce: [0.8, 0.5, 0.2, 2] }, // range: min:0|max:*
+
+    bookmark: {
+      background: {
+
+        // bookmark left side panel background blur amount
+        blur: 14, // range: min:0|max:*
+
+        // bookmark left side panel background colour
+        // colour defined with HSLA: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsla
+        color: { hsla: [200, 180, 25, 0.2] }
+      }
+    }
+
+  },
+
   bookmark: {
 
     // open the bookmarks in a new tab: true or false
@@ -14,6 +55,9 @@ export const config = {
     // bookmark left side panel size
     // this area contains bookmark group name, description and open all button
     panel: 35, // range: min:0|max:100
+
+    // bookmark icon size
+    iconSize: 20, // range: min:0|max:*
 
     // spacing between bookmark icons
     iconSpacing: 10, // range: min:0|max:*
@@ -107,46 +151,6 @@ export const config = {
 
   },
 
-  theme: {
-
-    // global scale
-    scale: 38, // range: min:0|max:100
-
-    // accent colours
-    // not used for much yet, this should be developed as the project grows
-    // colour defined with HSL: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl
-    accent: { hsl: [204, 100, 72] },
-
-    // text colours
-    // not used for much yet, this should be developed as the project grows
-    // colour defined with HSL: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl
-    text: { hsl: [0, 0, 0] },
-
-    // text font
-    // works with Google Fonts: https://fonts.google.com/
-    // enter the full name of a font as it is displayed on Google Fonts
-    font: 'Ubuntu',
-
-    // the speed of the different transitions
-    transition: { speed: { xfast: 10, fast: 20, medium: 30, slow: 40, xslow: 50 } }, // range: min:0|max:*
-
-    // the bounce transition easing bezier curve
-    easing: { bounce: [0.8, 0.5, 0.2, 2] }, // range: min:0|max:*
-
-    bookmark: {
-      background: {
-
-        // bookmark left side panel background blur amount
-        blur: 14, // range: min:0|max:*
-
-        // bookmark left side panel background colour
-        // colour defined with HSLA: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsla
-        color: { hsla: [200, 180, 25, 0.2] }
-      }
-    }
-
-  },
-
   background: {
 
     // the background is made of three layers
@@ -201,4 +205,5 @@ export const config = {
     }
 
   }
+
 };
