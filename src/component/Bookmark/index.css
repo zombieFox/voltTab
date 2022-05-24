@@ -2,13 +2,12 @@
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   display: grid;
-  grid-template-columns: calc(var(--bookmark-panel-size) * 1%) 1fr;
+  grid-template-columns: calc(var(--bookmark-panel) * 1%) 1fr calc(var(--bookmark-panel) * 1%);
   align-items: center;
   z-index: var(--z-index-bookmark);
 }
 
 .bookmark-panel {
-  grid-column: 1 / 2;
   grid-row: 1 / -1;
   align-self: normal;
   background-color:
@@ -19,4 +18,12 @@
   backdrop-filter: blur(calc(var(--theme-bookmark-group-background-blur) * 1px));
   pointer-events: none;
   z-index: 1;
+}
+
+.bookmark-panel-left {
+  grid-column: 1 / 2;
+}
+
+.bookmark-panel-right {
+  grid-column: 3 / 4;
 }

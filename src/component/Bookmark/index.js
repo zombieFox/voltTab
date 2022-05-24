@@ -15,7 +15,13 @@ export const Bookmark = function() {
 
   this.style = () => {
 
-    applyCSSVar('--bookmark-panel-size', config.bookmark.panel.size);
+    applyCSSVar('--bookmark-panel', config.bookmark.panel);
+
+    applyCSSVar('--bookmark-icon-spacing', config.bookmark.iconSpacing);
+
+    applyCSSVar('--bookmark-group-spacing', config.bookmark.groupSpacing);
+
+    applyCSSVar('--bookmark-tab-spacing', config.bookmark.tabSpacing);
 
   }
 
@@ -66,6 +72,18 @@ export const Bookmark = function() {
     }
 
     this.node.panel.classList.add('bookmark-panel');
+
+    switch (config.bookmark.direction) {
+
+      case 'left':
+        this.node.panel.classList.add('bookmark-panel-left');
+        break;
+
+      case 'right':
+        this.node.panel.classList.add('bookmark-panel-right');
+        break;
+
+    }
 
     this.node.bookmark.appendChild(this.node.panel);
 

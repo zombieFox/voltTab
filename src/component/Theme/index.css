@@ -1,4 +1,12 @@
 :root {
+  --font-size: calc(var(--theme-scale) * 0.025vmax);
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+:root {
   --theme-accent:
     hsl(var(--theme-accent-hsl-h),
       calc(var(--theme-accent-hsl-s) * 1%),

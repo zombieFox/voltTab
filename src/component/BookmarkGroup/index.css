@@ -3,28 +3,39 @@
   grid-row: 1 / -1;
   display: flex;
   flex-direction: column;
-  gap: 3em;
+  gap: calc((var(--bookmark-group-spacing) / 10) * 1em);
   padding: 3em 0;
   z-index: 2;
 }
 
 .bookmark-group-item {
   display: grid;
-  grid-template-columns: calc(var(--bookmark-panel-size) * 1%) 1fr;
+  grid-template-columns: calc(var(--bookmark-panel) * 1%) 1fr calc(var(--bookmark-panel) * 1%);
   position: relative;
 }
 
 .bookmark-group-tab {
+  grid-row: 1 / 2;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
-  text-align: right;
+  justify-content: flex-end;
   color: hsl(var(--bookmark-group-color-primary-hsl-h),
       calc(var(--bookmark-group-color-primary-hsl-s) * 1%),
       calc(var(--bookmark-group-color-primary-hsl-l) * 1%));
-  gap: 3em;
-  padding: 0 3em;
+  gap: calc((var(--bookmark-tab-spacing) / 10) * 1em);
+  padding: 0 calc((var(--bookmark-tab-spacing) / 10) * 1em);
+}
+
+.bookmark-group-item-left .bookmark-group-tab {
+  grid-column: 1 / 2;
+  flex-direction: row;
+  text-align: right;
+}
+
+.bookmark-group-item-right .bookmark-group-tab {
+  grid-column: 3 / 4;
+  flex-direction: row-reverse;
+  text-align: left;
 }
 
 .bookmark-group-label {
@@ -39,8 +50,8 @@
   font-size: 2em;
   margin: 0;
   padding: 0;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 100;
+  font-family: var(--theme-font), sans-serif;
+  font-weight: var(--font-weight-light);
   color: hsl(var(--bookmark-group-color-primary-hsl-h),
       calc((var(--bookmark-group-color-primary-hsl-s) - 30) * 1%),
       calc((var(--bookmark-group-color-primary-hsl-l) - 20) * 1%));
@@ -59,8 +70,8 @@
   font-size: 1em;
   margin: 0;
   padding: 0;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
+  font-family: var(--theme-font), sans-serif;
+  font-weight: var(--font-weight-medium);
   color: hsl(var(--bookmark-group-color-secondary-hsl-h),
       calc((var(--bookmark-group-color-secondary-hsl-s) - 30) * 1%),
       calc((var(--bookmark-group-color-secondary-hsl-l) - 20) * 1%));
@@ -76,9 +87,21 @@
 }
 
 .bookmark-group-list {
+  grid-row: 1 / 2;
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
-  padding: 0 1em;
+  flex-direction: row;
+  gap: calc((var(--bookmark-icon-spacing) / 10) * 1em);
+  padding: 0 calc((var(--bookmark-icon-spacing) / 10) * 1em);
   align-items: center;
+}
+
+.bookmark-group-item-left .bookmark-group-list {
+  grid-column: 2 / 4;
+  justify-content: flex-start;
+}
+
+.bookmark-group-item-right .bookmark-group-list {
+  grid-column: 1 / 3;
+  justify-content: flex-end;
 }

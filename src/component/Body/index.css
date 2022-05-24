@@ -1,7 +1,3 @@
-:root {
-  --font-size: calc(var(--theme-scale) * 0.025vmax);
-}
-
 ::selection {
   background-color: rgb(var(--theme-accent));
   color: hsl(var(--theme-text));
@@ -13,10 +9,9 @@ body {
   font-size: var(--font-size);
   line-height: 1.6;
   font-family: var(--theme-font);
-  font-weight: var(--theme-font-ui-weight);
-  font-style: var(--theme-font-ui-style);
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
   color: hsl(var(--theme-text));
-  transition: background-color var(--layout-transition-extra-fast);
 }
 
 body {

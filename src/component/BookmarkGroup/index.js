@@ -55,6 +55,18 @@ export const BookmarkGroup = function(bookmarkGroupData, allBookmarkGroup) {
 
     this.node.groupItem.classList.add('bookmark-group-item');
 
+    switch (config.bookmark.direction) {
+
+      case 'left':
+        this.node.groupItem.classList.add('bookmark-group-item-left');
+        break;
+
+      case 'right':
+        this.node.groupItem.classList.add('bookmark-group-item-right');
+        break;
+
+    }
+
     if (config.bookmark.alwaysVisible) {
 
       this.node.groupItem.classList.add('bookmark-group-active');

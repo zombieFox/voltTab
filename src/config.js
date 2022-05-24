@@ -4,16 +4,25 @@ export const config = {
     // open the bookmarks in a new tab: true or false
     newTab: true, // boolean: true|false
 
+    // the bookmark panel and group name position and direction the bookmarks flow
+    direction: 'left', // string: left|right
+
     // bookmark icons show when a bookmark group gains focus or on cursor hover
     // if set to true bookmarks are always shown
     alwaysVisible: false, // boolean: true|false
 
-    // bookmark left side panel
-    // area contains bookmark group name, description and open all button
-    panel: {
-      // width of the left panel
-      size: 35 // range: min:0|max:100
-    },
+    // bookmark left side panel size
+    // this area contains bookmark group name, description and open all button
+    panel: 35, // range: min:0|max:100
+
+    // spacing between bookmark icons
+    iconSpacing: 10, // range: min:0|max:*
+
+    // spacing between bookmark group rows
+    groupSpacing: 30, // range: min:0|max:*
+
+    // spacing between bookmark group name, description and open all button
+    tabSpacing: 30, // range: min:0|max:*
 
     // bookmark grouping
     // each object in this array definesa group
@@ -67,7 +76,7 @@ export const config = {
       color: { primary: { hsl: [0, 0, 100] }, secondary: { hsl: [250, 60, 70] } },
       list: [
         { icon: 'fa-brands fa-reddit-alien', url: 'https://reddit.com/' },
-        { icon: 'fa-brands fa-deviantart', url: 'https://www.deviantart.com/' },
+        { icon: 'fa-brands fa-artstation', url: 'https://www.artstation.com/' },
         { icon: 'fa-brands fa-discord', url: 'https://discord.com/' },
         { icon: 'fa-solid fa-paperclip', url: 'https://www.decisionproblem.com/paperclips/' },
         { icon: 'fa-solid fa-dice-d20', url: 'https://zombiefox.github.io/diceRoller/' },
@@ -75,7 +84,7 @@ export const config = {
       ]
     }, {
       name: 'Entertainment',
-      description: 'Films and videos',
+      description: 'Films, videos, streams',
       color: { primary: { hsl: [0, 0, 100] }, secondary: { hsl: [0, 60, 70] } },
       list: [
         { icon: 'fa-brands fa-vimeo', url: 'https://vimeo.com/' },
