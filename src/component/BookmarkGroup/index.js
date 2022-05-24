@@ -109,7 +109,7 @@ export const BookmarkGroup = function(bookmarkGroupData, allBookmarkGroup) {
 
     bookmarkGroupData.list.forEach((listItem, index) => {
 
-      const bookmarkLink = new BookmarkLink(listItem, (bookmarkGroupData.list.length - index));
+      const bookmarkLink = new BookmarkLink(listItem, bookmarkGroupData.list.length, index);
 
       bookmarkLink.render();
 

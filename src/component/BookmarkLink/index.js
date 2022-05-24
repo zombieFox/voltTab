@@ -2,7 +2,7 @@ import { config } from '../../config';
 
 import './index.css';
 
-export const BookmarkLink = function(linkData, delay) {
+export const BookmarkLink = function(linkData, listCount, index) {
 
   this.node = {
     link: document.createElement('a'),
@@ -16,7 +16,17 @@ export const BookmarkLink = function(linkData, delay) {
 
     this.node.link.classList.add('bookmark-link');
 
-    this.node.link.style.setProperty('--bookmark-link-delay', (delay / 20));
+    switch (config.bookmark.direction) {
+
+      case 'left':
+        this.node.link.style.setProperty('--bookmark-link-delay', ((listCount - index) / 20));
+        break;
+
+      case 'right':
+        this.node.link.style.setProperty('--bookmark-link-delay', ((listCount - (listCount - index)) / 20));
+        break;
+
+    }
 
     this.node.link.href = linkData.url;
 

@@ -15,7 +15,7 @@
 .bookmark-group-item:focus-within .bookmark-link,
 .bookmark-group-active .bookmark-link {
   transform: scale(1);
-  transition: transform var(--theme-transition-xslow-bounce) 0s;
+  transition: transform var(--theme-transition-slow-bounce) 0s;
 }
 
 .bookmark-group-item:focus-within .bookmark-link:hover,
