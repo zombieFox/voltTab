@@ -8,10 +8,6 @@ import './index.css';
 
 export const Theme = function() {
 
-  this.node = {
-    html: document.querySelector('html')
-  }
-
   this.style = () => {
 
     applyCSSVar('--theme-scale', config.theme.scale);
@@ -33,7 +29,7 @@ export const Theme = function() {
 
     applyCSSVar('--theme-easing-bounce', `${config.theme.easing.bounce[0]}, ${config.theme.easing.bounce[1]}, ${config.theme.easing.bounce[2]}, ${config.theme.easing.bounce[3]}`);
 
-    applyCSSVar('--theme-font', config.theme.font);
+    applyCSSVar('--theme-font', `"${config.theme.font}"`);
 
     applyCSSVar('--theme-bookmark-background-color-hsla-h', config.theme.bookmark.background.color.hsla[0]);
     applyCSSVar('--theme-bookmark-background-color-hsla-s', config.theme.bookmark.background.color.hsla[1]);
