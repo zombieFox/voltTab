@@ -1,7 +1,9 @@
-# voltTab
+# Volt Tab
 A cool new tab page
 
-[See the demo in action](https://zombiefox.github.io/voltTab/)
+[![voltTab screenshot](asset/screenshot/screenshot-001.gif)](https://zombiefox.github.io/voltTab/)
+
+## [See the demo in action](https://zombiefox.github.io/voltTab/)
 
 ---
 
