@@ -17,7 +17,15 @@ export const Bookmark = function() {
 
     applyCSSVar('--bookmark-panel', config.bookmark.panel);
 
-    applyCSSVar('--bookmark-icon-scale', config.bookmark.iconSize);
+    applyCSSVar('--bookmark-scale', config.bookmark.scale);
+
+    applyCSSVar('--bookmark-icon-scale-visible', config.bookmark.iconScaleVisible);
+
+    applyCSSVar('--bookmark-icon-scale-hidden', config.bookmark.iconScaleHidden);
+
+    applyCSSVar('--bookmark-icon-scale-hover', config.bookmark.iconScaleHover);
+
+    applyCSSVar('--bookmark-icon-scale-active', config.bookmark.iconScaleActive);
 
     applyCSSVar('--bookmark-icon-spacing', config.bookmark.iconSpacing);
 

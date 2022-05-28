@@ -56,10 +56,23 @@ export const config = {
     // this area contains bookmark group name, description and open all button
     panel: 35, // range: min:0|max:100
 
-    // bookmark icon size
-    iconSize: 20, // range: min:0|max:*
+    // bookmark size
+    scale: 20, // range: min:0|max:*
 
-    // spacing between bookmark icons
+    // bookmark icon size the bookmark group is in focus
+    iconScaleVisible: 1, // range: min:*|max:*
+
+    // bookmark icon size when the bookmark group is not in focus
+    // if alwaysVisible is set to true this setting will not have an effect
+    iconScaleHidden: 0, // range: min:*|max:*
+
+    // bookmark icon size when the bookmark icon is hovered (:hover)
+    iconScaleHover: 1.4, // range: min:*|max:*
+
+    // bookmark icon size when the bookmark icon is clicked (:active)
+    iconScaleActive: 1, // range: min:*|max:*
+
+    // spacing between bookmarks
     iconSpacing: 10, // range: min:0|max:*
 
     // spacing between bookmark group rows

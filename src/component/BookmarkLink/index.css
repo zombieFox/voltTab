@@ -3,18 +3,18 @@
 .bookmark-link:hover,
 .bookmark-link:focus,
 .bookmark-link:active {
-  font-size: calc((var(--bookmark-icon-scale) / 10) * 1em);
+  font-size: calc((var(--bookmark-scale) / 10) * 1em);
   color: hsl(var(--bookmark-group-color-primary-hsl-h),
       calc(var(--bookmark-group-color-primary-hsl-s) * 1%),
       calc(var(--bookmark-group-color-primary-hsl-l) * 1%));
   text-decoration: none;
-  transform: scale(0);
+  transform: scale(var(--bookmark-icon-scale-hidden));
   transition: transform var(--theme-transition-medium-ease) calc(var(--bookmark-link-delay) * 1s);
 }
 
 .bookmark-group-item:focus-within .bookmark-link,
 .bookmark-group-active .bookmark-link {
-  transform: scale(1);
+  transform: scale(var(--bookmark-icon-scale-visible));
   transition: transform var(--theme-transition-slow-bounce) 0s;
 }
 
@@ -22,13 +22,13 @@
 .bookmark-group-item:focus-within .bookmark-link:focus,
 .bookmark-group-active .bookmark-link:hover,
 .bookmark-group-active .bookmark-link:focus {
-  transform: scale(1.4);
+  transform: scale(var(--bookmark-icon-scale-hover));
   transition: transform var(--theme-transition-fast-bounce);
 }
 
 .bookmark-group-item:focus-within .bookmark-link:active,
 .bookmark-group-active .bookmark-link:active {
-  transform: scale(1);
+  transform: scale(var(--bookmark-icon-scale-active));
   transition: transform var(--theme-transition-fast-bounce);
 }
 
