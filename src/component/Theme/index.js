@@ -11,7 +11,6 @@ export const Theme = function() {
   this.style = () => {
 
     applyCSSVar('--theme-scale', config.theme.scale);
-    applyCSSVar('--theme-scale', config.theme.scale);
 
     applyCSSVar('--theme-text-hsl-h', config.theme.text.hsl[0]);
     applyCSSVar('--theme-text-hsl-s', config.theme.text.hsl[1]);
