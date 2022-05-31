@@ -17,14 +17,11 @@
     "extension",
     "bookmarks",
     "links",
-    "gridTab"
+    "voltTab",
+    "volt tab",
   ],
   "author": "zombieFox",
   "license": "GPL-3",
-  "bugs": {
-    "url": "https://github.com/zombieFox/gridTab/issues"
-  },
-  "homepage": "https://github.com/zombieFox/gridTab#readme",
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
